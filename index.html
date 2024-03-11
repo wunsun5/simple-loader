@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Loader</title>
+    <style>
+        body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background-color: black;
+        }
+
+        .loader{
+            position: relative;
+            width: 4em;
+            height: 4em;
+            border-radius: 50%;
+            border: 2px solid white;
+            animation: rotate 5s linear infinite;
+        }
+        
+        .loader::after{
+            content: '';
+            position: absolute;
+            width: 1em;
+            height: 1em;
+            background-color: rgb(3, 250, 3);
+            border-radius: 50%;
+            top: .2em;
+            box-shadow: 0 0 20px 4px rgba(10, 220, 10, 0.813), 
+                        0 0 20px 4px rgba(98, 99, 98, 0.813);
+        }
+
+        @keyframes rotate {
+            to{
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="loader"></div>
+    
+</body>
+</html>
